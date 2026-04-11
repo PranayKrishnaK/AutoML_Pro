@@ -4,5 +4,7 @@ numpy==1.23.5
 scikit-learn==1.2.2
 scipy==1.10.1
 pycaret==3.0.4
-requests
 streamlit-authenticator
+requests
+setuptools==68.0.0
+wheel
