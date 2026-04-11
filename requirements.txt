@@ -1,0 +1,5 @@
+streamlit
+pandas
+requests
+pycaret
+streamlit-authenticator
