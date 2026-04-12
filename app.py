@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import pickle
 import requests
-import sklearn
 from pycaret.classification import setup as cls_setup, compare_models as cls_compare, pull as cls_pull, plot_model as cls_plot, tune_model as cls_tune
 from pycaret.regression import setup as reg_setup, compare_models as reg_compare, pull as reg_pull, plot_model as reg_plot, tune_model as reg_tune
 
