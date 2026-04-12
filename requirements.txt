@@ -1,8 +1,8 @@
 streamlit
 pandas
-numpy
-scikit-learn
+numpy>=1.26
+scikit-learn>=1.4
 joblib
 requests
-pycaret
+pycaret>=3.0
 streamlit-authenticator
