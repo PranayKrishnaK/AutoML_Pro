@@ -6,6 +6,9 @@ import sklearn
 from pycaret.classification import setup as cls_setup, compare_models as cls_compare, pull as cls_pull, plot_model as cls_plot, tune_model as cls_tune
 from pycaret.regression import setup as reg_setup, compare_models as reg_compare, pull as reg_pull, plot_model as reg_plot, tune_model as reg_tune
 
+from pycaret.clustering import setup as clu_setup, compare_models as clu_compare, pull as clu_pull, plot_model as clu_plot, tune_model as clu_tune
+from pycaret.anomaly import setup as ano_setup, compare_models as ano_compare, pull as ano_pull, plot_model as ano_plot, tune_model as ano_tune
+
 from db import create_tables, add_user, get_hashed_password, save_dataset, get_all_users, get_all_datasets
 from streamlit_authenticator.utilities.hasher import Hasher
 
