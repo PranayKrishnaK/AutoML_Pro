@@ -1,7 +1,7 @@
-streamlit
-pandas
-numpy
-joblib
-requests
-pycaret
-streamlit-authenticator
+streamlit>=1.30
+pandas>=1.5
+numpy>=1.23
+joblib>=1.2
+requests>=2.31
+pycaret==3.3.0
+streamlit-authenticator>=0.3
