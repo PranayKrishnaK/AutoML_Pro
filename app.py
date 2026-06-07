@@ -5,8 +5,8 @@ import requests
 from pycaret.classification import setup as cls_setup, compare_models as cls_compare, pull as cls_pull, plot_model as cls_plot, tune_model as cls_tune
 from pycaret.regression import setup as reg_setup, compare_models as reg_compare, pull as reg_pull, plot_model as reg_plot, tune_model as reg_tune
 
-from pycaret.clustering import setup as clu_setup, compare_models as clu_compare, pull as clu_pull, plot_model as clu_plot, tune_model as clu_tune
-from pycaret.anomaly import setup as ano_setup, compare_models as ano_compare, pull as ano_pull, plot_model as ano_plot, tune_model as ano_tune
+from pycaret.clustering import setup as clu_setup,  create_model as clu_create, pull as clu_pull, plot_model as clu_plot, assign_model as clu_assign
+from pycaret.anomaly import setup as ano_setup, create_model as ano_create, pull as ano_pull, plot_model as ano_plot,assign_model as ano_assign
 
 from db import create_tables, add_user, get_hashed_password, save_dataset, get_all_users, get_all_datasets
 from streamlit_authenticator.utilities.hasher import Hasher
@@ -117,17 +117,17 @@ elif menu == "Train":
             elif mode == "Clustering":
                 st.session_state.mode = mode
                 st.info(f"Detected: {mode}")
-                clu_setup(data=df, target=target, verbose=False)
-                best_model = clu_compare()
-                model = clu_tune(best_model)
+                clu_setup(data=df,verbose=False)
+                best_model = clu_create()
+                model = clu_assign(best_model)
                 results = clu_pull()
 
             elif mode == "Anomaly":
                 st.session_state.mode = mode
                 st.info(f"Detected: {mode}")
                 ano_setup(data=df, target=target, verbose=False)
-                best_model = ano_compare()
-                model = ano_tune(best_model)
+                best_model = ano_create()
+                model = ano_assign(best_model)
                 results = ano_pull()
 
             else:
